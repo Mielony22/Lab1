@@ -24,16 +24,16 @@ nazwa pliku Main.java */
         for (int i = 0; i < 370; i += 10)
             System.out.printf("%d\t%f\t\n", i, Math.sin(i / 360.0 * 2 * Math.PI));
         Scanner input = new Scanner(System.in);
-        int num1, num2=0;
+        int num1, num2 ;
         do {
-            System.out.print("Podaj pierwsza liczbę:");
+            System.out.print("Podaj pierwsza liczbe");
             num1 = input.nextInt();
-            if (num1 != 0) {
-                System.out.print("Podaj drugą liczbę:");
-                num2 = input.nextInt();
-            }
+            if (num1 == 0) break;
+            System.out.print("Podaj druga liczbe");
+            num2 = input.nextInt();
+            if (num2 == 0) break;
             System.out.printf("Wynik dodawania %d +%d = %d%n", num1, num2, num1 + num2);
-        } while ((num1 != 0) && (num2 != 0));
+        } while (true);
 
 
     }
